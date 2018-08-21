@@ -16,3 +16,5 @@ deploy:
   local_dir: build
   on:
     branch: master
+test:
+  - jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage

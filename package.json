@@ -15,9 +15,10 @@
     "eject": "react-scripts eject",
     "cypress:open": "cypress open",
     "predeploy": "npm run build",
-     "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
+    "coveralls": "^3.0.2",
     "cypress": "^3.1.0",
     "enzyme": "^3.4.4",
     "enzyme-adapter-react-16": "^1.2.0",
