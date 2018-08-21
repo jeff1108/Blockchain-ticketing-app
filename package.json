@@ -1,6 +1,7 @@
 {
   "name": "ticketing-app",
   "version": "0.1.0",
+  "homepage": "https://jeff1108.github.io/blockchain-ticketing-app/",
   "private": true,
   "dependencies": {
     "react": "^16.4.2",
