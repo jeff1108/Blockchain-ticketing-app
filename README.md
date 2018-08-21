@@ -6,6 +6,7 @@
 clone this repo
 
 ```
+git clone https://github.com/jeff1108/blockchain-ticketing-app.git
 npm install  
 npm start - to run server  
 ```
