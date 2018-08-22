@@ -1,6 +1,7 @@
 {
   "name": "ticketing-app",
   "version": "0.1.0",
+  "homepage": "https://jeff1108.github.io/blockchain-ticketing-app/",
   "private": true,
   "dependencies": {
     "react": "^16.4.2",
@@ -12,9 +13,12 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
+    "coveralls": "^3.0.2",
     "cypress": "^3.1.0",
     "enzyme": "^3.4.4",
     "enzyme-adapter-react-16": "^1.2.0",
@@ -23,6 +27,7 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.11.1",
+    "gh-pages": "^1.2.0",
     "react-test-renderer": "^16.4.2"
   }
 }
