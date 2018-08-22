@@ -3,6 +3,18 @@ class App extends Component {
   constructor() {
     super();
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.state = {
+      concert1: {
+        name: "Bruno Mars",
+        description: "Lanuch in Hong Kong 2018",
+        price: "£100"
+      },
+      concert2: {
+        name: "Justin Bieber",
+        description: "Lanuch in Hong Kong 2018",
+        price: "£100"
+      }
+    }
   }
 
   handleSubmit(event) {
@@ -18,22 +30,26 @@ class App extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label htmlFor="username">Enter username</label>
-        <input id="username" name="username" type="text" />
-
-        <label htmlFor="email">Enter your email</label>
-        <input id="email" name="email" type="email" />
-
-        <label htmlFor="birthdate">Enter your birth date</label>
-        <input id="birthdate" name="birthdate" type="text" />
-
-        <button>Send data!</button>
+        <label htmlFor="concert_name">Concert:
+          <h4>{this.state.concert1.name}</h4>
+        </label>
+        <label htmlFor="concert_description">Description:
+          <h4>{this.state.concert1.description}</h4>
+        </label>
+        <label htmlFor="concert_price">Price:
+          <h4>{this.state.concert1.price}</h4>
+        </label>
+        <button>Sumbit!</button>
       </form>
     );
   }
 }
 
 export default App;
+
+
+  // <input id="username" name="username" type="text" />
+
 
 //
 // class App extends Component {
