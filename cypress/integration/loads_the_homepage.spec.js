@@ -1,6 +1,10 @@
 describe('Visit Homepage', () => {
-  it('Displays Hello World message', () => {
+  it('Check display all concerts', () => {
     cy.visit('/');
-    cy.contains('Hello World!');
+    cy.contains('Bruno Mars');
+  });
+
+  it('Can buy a ticket', () => {
+    cy.get('form').submit();
   });
 });
