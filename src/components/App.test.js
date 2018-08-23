@@ -22,10 +22,4 @@ describe('app component', () => {
     const text = wrapper.state().concerts[0].price
     expect(text).toEqual('£100')
   });
-
-  // it('renders a buy button', () => {
-  //   const wrapper = shallow(<App />)
-  //   const button = wrapper.find('button').text()
-  //   expect(button).toEqual('Buy!')
-  // });
 });

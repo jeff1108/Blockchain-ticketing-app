@@ -20,18 +20,20 @@ class App extends Component {
     ]
   }
 
-  getConcert = () => {
-
-  }
-
   render() {
     return (
       <div className='App'>
         <header className='App-header'>
           <h2 className='App-title'>Concert Search</h2>
         </header>
+        {
+          this.state.concerts.map((concert, index) => {
+            return (
+              <Concerts key={index} concert={concert} />
+            )
+          })
+        }
 
-        <Concerts concerts={this.state.concerts} />
       </div>
     );
   }
@@ -39,6 +41,7 @@ class App extends Component {
 
 export default App;
 
+// <Concerts concerts={this.state.concerts} />
 
 // handleSubmit(event) {
 //   event.preventDefault();

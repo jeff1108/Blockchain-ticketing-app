@@ -1,17 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Concerts = props => (
-  <div>
-  { props.concerts.map((concert) => {
+class Concerts extends Component {
+
+  render() {
     return (
-      <div key={concert.id}>
-        <p>{concert.name}</p>
-        <p>{concert.price}</p>
-        <button>Buy!</button>
-      </div>
+      <div className='concert'>
+       <p>{this.props.concert.name}</p>
+       <p>{this.props.concert.price}</p>
+     </div>
     )
-  }) }
-  </div>
-)
+  }
+}
+
+
 
 export default Concerts
