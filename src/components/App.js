@@ -32,19 +32,19 @@ class App extends Component {
   render() {
     return (
       <div>
-      <h2> ALL TICKETS </h2>
-      // <form onSubmit={this.handleSubmit}>
-      //   <label htmlFor="concert_name">Concert:
-      //     <h4>{this.state.concert1.name}</h4>
-      //   </label>
-      //   <label htmlFor="concert_description">Description:
-      //     <h4>{this.state.concert1.description}</h4>
-      //   </label>
-      //   <label htmlFor="concert_price">Price:
-      //     <h4>{this.state.concert1.price}</h4>
-      //   </label>
-      //   <button>Sumbit!</button>
-      // </form>
+      <h2>ALL TICKETS</h2>
+      <form onSubmit={this.handleSubmit}>
+        <label htmlFor="concert_name">Concert:
+          <h4>{this.state.concert1.name}</h4>
+        </label>
+        <label htmlFor="concert_description">Description:
+          <h4>{this.state.concert1.description}</h4>
+        </label>
+        <label htmlFor="concert_price">Price:
+          <h4>{this.state.concert1.price}</h4>
+        </label>
+        <button>Sumbit!</button>
+      </form>
       </div>
     );
   }
