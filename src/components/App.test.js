@@ -23,14 +23,5 @@ describe('app component', () => {
       expect(text).toEqual("Bruno Mars")
     });
 
-    // it('renders button when clicks ', () => {
-    //   const wrapper = shallow(<App />)
-    //   const button = wrapper.find('button')
-    //   button.simulate('click')
-    //   const text = wrapper.find('p').text()
-    //   expect(text).toEqual('Thank you for buying this ticket')
-    // });
-
-  
-
+    
 });

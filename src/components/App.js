@@ -23,9 +23,9 @@ class App extends Component {
     event.preventDefault();
     const data = new FormData(event.target);
 
-    fetch('/api/form-submit-url', {
+    fetch('http://localhost:9292/blocks/create', {
       method: 'POST',
-      body: data,
+      body: JSON.stringify( { "params": {"sender": "000000000", "receiver": "000000000", "value": 1} } ),
     });
   }
 
@@ -35,31 +35,21 @@ class App extends Component {
       <h2>ALL TICKETS</h2>
       <form onSubmit={this.handleSubmit}>
 
-        <label htmlFor="concert_name">Concert:
-          <h4>{this.state.concert1.name}</h4>
-        </label>
-        <label htmlFor="concert_description">Description:
-          <h4>{this.state.concert1.description}</h4>
-        </label>
-        <label htmlFor="concert_price">Price:
-          <h4>{this.state.concert1.price}</h4>
-        </label>
+        <label htmlFor="concert_name">Concert:</label>
+        <h4 id="concert_name" name="concert_name" >{this.state.concert1.name}</h4>
+
+        <label htmlFor="concert_description">Description:</label>
+        <h4 id="concert_description" name="concert_description" >{this.state.concert1.description}</h4>
+
+        <label htmlFor="concert_price">Price:</label>
+        <h4 id="concert_price" name="concert_price" >{this.state.concert1.price}</h4>
+
         <button>Sumbit!</button>
       </form>
       </div>
     );
   }
-
-
 }
 
+
 export default App;
-
-
-  //        concert_name: 'Conert_name',
-  //        price: 16,
-  //        description: 'hello',
-  //        sender_id: 1234,
-  //        sender_address: 'seller@gmail.com',
-  //        receiver_address: 2345,
-  //        receiver_address: 'receiver_address'
