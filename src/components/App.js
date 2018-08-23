@@ -1,19 +1,28 @@
 import React, { Component } from 'react';
 import { Form, FormControl, Button } from 'react-bootstrap';
+import Concerts from './Concerts';
 
 class App extends Component {
   state = {
-      concert1: {
+    concerts: [
+      {
+        id: 1,
         name: "Bruno Mars",
         description: "Lanuch in Hong Kong 2018",
         price: "£100"
       },
-      concert2: {
+      {
+        id: 2,
         name: "Justin Bieber",
         description: "Lanuch in Hong Kong 2018",
         price: "£100"
       }
-    }
+    ]
+  }
+
+  getConcert = () => {
+
+  }
 
   render() {
     return (
@@ -21,11 +30,11 @@ class App extends Component {
         <header className='App-header'>
           <h2 className='App-title'>Concert Search</h2>
         </header>
-        </div>
+
+        <Concerts concerts={this.state.concerts} />
+      </div>
     );
   }
-
-
 }
 
 export default App;
