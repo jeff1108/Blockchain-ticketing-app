@@ -44,7 +44,7 @@ class App extends Component {
         <label htmlFor="concert_price">Price:
           <h4>{this.state.concert1.price}</h4>
         </label>
-        <button>Sumbit!</button>
+        <button>Buy!</button>
       </form>
       </div>
     );
