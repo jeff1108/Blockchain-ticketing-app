@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Form, FormControl, Button } from 'react-bootstrap';
 
 class App extends Component {
   constructor() {
@@ -21,7 +20,6 @@ class App extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    const data = new FormData(event.target);
 
     fetch('http://localhost:9292/blocks/create', {
       method: 'POST',
