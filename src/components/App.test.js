@@ -8,7 +8,7 @@ describe('app component', () => {
   it('renders the App title', () => {
     const wrapper = shallow(<App />);
     const text = wrapper.find('h2').text();
-    expect(text).toEqual('Checkout concerts in your area');
+    expect(text).toEqual('Checkout concerts in your area:');
   });
 
   it('record concert name', () => {
