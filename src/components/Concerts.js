@@ -8,7 +8,7 @@ class Concerts extends Component {
 
     fetch('http://localhost:9292/blocks/create', {
       method: 'POST',
-      body: JSON.stringify( { 'params': {'sender': '000000000', 'receiver': '000000000', 'name': this.props.concert.name, 'value': this.props.concert.price} } );
+      body: JSON.stringify( { 'params': {'sender': '000000000', 'receiver': '000000000', 'name': this.props.concert.name, 'value': this.props.concert.price} } )
     });
   }
 
