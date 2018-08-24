@@ -27,7 +27,7 @@ class App extends Component {
     return (
       <div className='App'>
         <header className='App-header'>
-          <h2 className='App-title'>Concert Search</h2>
+          <h2 className='App-title'>Checkout concerts in your area:</h2>
         </header>
         {
           this.state.concerts.map((concert, index) => {
