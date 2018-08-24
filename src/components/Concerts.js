@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Button } from 'react-bootstrap';
 
 class Concerts extends Component {
 
@@ -7,8 +8,9 @@ class Concerts extends Component {
       <div className='concert'>
        <p>{this.props.concert.name}</p>
        <p>{this.props.concert.price}</p>
+       <Button>Buy!</Button>
      </div>
-    )
+   );
   }
 }
 
