@@ -1,24 +1,27 @@
 import React, { Component } from 'react';
-import { Form, FormControl, Button } from 'react-bootstrap';
 import Concerts from './Concerts';
 
 class App extends Component {
-  state = {
-    concerts: [
-      {
-        id: 1,
-        name: "Bruno Mars",
-        description: "Lanuch in Hong Kong 2018",
-        price: "£100"
-      },
-      {
-        id: 2,
-        name: "Justin Bieber",
-        description: "Lanuch in Hong Kong 2018",
-        price: "£100"
-      }
-    ]
+  constructor() {
+    super();
+    this.state = {
+      concerts: [
+        {
+          id: 1,
+          name: 'Bruno Mars',
+          description: 'Lanuch in Hong Kong 2018',
+          price: '£100'
+        },
+        {
+          id: 2,
+          name: 'Justin Bieber',
+          description: 'Lanuch in Hong Kong 2018',
+          price: '£100'
+        }
+      ]
+    };
   }
+
 
   render() {
     return (
@@ -30,7 +33,7 @@ class App extends Component {
           this.state.concerts.map((concert, index) => {
             return (
               <Concerts key={index} concert={concert} />
-            )
+            );
           })
         }
 
