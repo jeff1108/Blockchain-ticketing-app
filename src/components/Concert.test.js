@@ -11,4 +11,8 @@ describe('concerts component', () => {
   it('renders a concert name', () => {
     expect(event.find('p').at(0).text()).toEqual(concert.displayName);
   });
+
+  it('render a concert location', () => {
+    expect(event.find('p').at(1).text()).toEqual(concert.location.city);
+  });
 });

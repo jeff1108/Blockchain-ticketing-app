@@ -17,6 +17,7 @@ class Concert extends Component {
     return (
       <div className='concert'>
         <p>{this.props.concert.displayName}</p>
+        <p>{this.props.concert.location.city}</p>
         <Button onClick={(e) => this.handleClick(e)}>
           Buy!
         </Button>
