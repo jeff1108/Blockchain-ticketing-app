@@ -9,14 +9,14 @@ const props = { concert };
 describe('concerts component', () => {
   let event = mount(<Concert {...props} />);
   it('renders a concert name', () => {
-    expect(event.find('p').at(0).text()).toEqual(concert.displayName);
+    expect(event.find('p').at(0).text()).toEqual(`Concert: ${concert.displayName}`);
   });
 
   it('render a concert location', () => {
-    expect(event.find('p').at(1).text()).toEqual(concert.location.city);
+    expect(event.find('p').at(1).text()).toEqual(`Location: ${concert.location.city}`);
   });
 
   it('render a concert date', () => {
-    expect(event.find('p').at(2).text()).toEqual(concert.start.date);
+    expect(event.find('p').at(2).text()).toEqual(`Date: ${concert.start.date}`);
   });
 });
