@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
 
-class Concerts extends Component {
+class Concert extends Component {
 
   handleClick(e) {
     e.preventDefault();
@@ -13,11 +13,14 @@ class Concerts extends Component {
   }
 
 
+
+
   render() {
     return (
       <div className='concert'>
-        <p>{this.props.concert.name}</p>
-        <p>{this.props.concert.price}</p>
+        <p>Concert: {this.props.concert.displayName}</p>
+        <p>Location: {this.props.concert.location.city}</p>
+        <p>Date: {this.props.concert.start.date}</p>
         <Button onClick={(e) => this.handleClick(e)}>
           Buy!
         </Button>
@@ -26,4 +29,5 @@ class Concerts extends Component {
   }
 }
 
-export default Concerts;
+
+export default Concert;

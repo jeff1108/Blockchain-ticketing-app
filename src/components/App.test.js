@@ -1,25 +1,32 @@
 import React from 'react';
 import App from './App';
+import { mount } from 'enzyme';
+import { concerts } from '../data/fixtures';
+import { fakeServer } from 'sinon';
 
-import { shallow } from 'enzyme';
-
+const props = { concert: concerts[0] };
 
 describe('app component', () => {
-  it('renders the App title', () => {
-    const wrapper = shallow(<App />);
-    const text = wrapper.find('h2').text();
-    expect(text).toEqual('Checkout concerts in your area:');
+  beforeEach(() => {
+    const server = fakeServer.create();
+
+    server.respondWith(
+      'GET',
+      'https://api.songkick.com/api/3.0/metro_areas/24426/calendar.json?apikey=$123&=min_date=2018-08-31&per_page=10',
+      [
+        200,
+        {'Content-Type': 'application/json' },
+        JSON.stringify(concerts)
+      ]
+    );
   });
 
-  it('record concert name', () => {
-    const wrapper = shallow(<App />);
-    const text = wrapper.state().concerts[0].name;
-    expect(text).toEqual('Bruno Mars');
-  });
+  describe('when creating a new concerts', () => {
 
-  it('record concert price', () => {
-    const wrapper = shallow(<App />);
-    const text = wrapper.state().concerts[0].price;
-    expect(text).toEqual('50');
+    it('renders the App title', () => {
+      const app = mount(<App {...props} />);
+      const text = app.find('h2').text();
+      expect(text).toEqual('Checkout concerts in your area:');
+    });
   });
 });
