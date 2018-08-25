@@ -8,15 +8,14 @@ class App extends Component {
     super();
     this.state = {
       concerts: []
-    }
+    };
   }
 
   componentDidMount() {
     fetch(`https://api.songkick.com/api/3.0/metro_areas/24426/calendar.json?apikey=${API_KEY}&=min_date=${DATE}&per_page=10`)
       .then(response => response.json())
-        .then(json => {this.setState({concerts: json.resultsPage.results.event});
-        console.log(this.state.concerts[0].displayName)
-      })
+      .then(json => {this.setState({concerts: json.resultsPage.results.event});
+      });
   }
 
   render() {
@@ -29,7 +28,7 @@ class App extends Component {
           this.state.concerts.map((concert, index) => {
             return (
               <Concert key={index} concert={concert} />
-            )
+            );
           })
         }
       </div>
