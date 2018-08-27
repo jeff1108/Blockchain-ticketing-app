@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
 
 const MAXIMUM_PRICE = 600;
+const RECEIVER_ADDRESS = '525410238F3386EECD7E7D4682E124B193B41DDC3FF9D36AADE4406F07A83E2A';
 
 class Concert extends Component {
 
@@ -16,7 +17,7 @@ class Concert extends Component {
           'params':
             {
               'sender': '000000000',
-              'receiver': '000000000',
+              'receiver': RECEIVER_ADDRESS,
               'name': this.props.concert.displayName,
               'value': this.getPrice(this.props.concert.displayName)
             }
