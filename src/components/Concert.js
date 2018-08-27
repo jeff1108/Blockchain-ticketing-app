@@ -31,7 +31,7 @@ class Concert extends Component {
 
   getDate(date) {
     var newDate = new Date(date);
-    var re = newDate.toLocaleDateString();
+    var re = newDate.toLocaleDateString('en-HK');
     return re;
   }
 
@@ -49,6 +49,5 @@ class Concert extends Component {
     );
   }
 }
-
 
 export default Concert;
