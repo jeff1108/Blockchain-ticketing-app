@@ -5,7 +5,7 @@ import { concerts } from '../data/fixtures';
 import { fakeServer } from 'sinon';
 
 const props = { concert: concerts[0] };
-const callUrl = "/api/3.0/metro_areas/24426/calendar.json?apikey=$123&=min_date=2018-08-31&per_page=10"
+const callUrl = '/api/3.0/metro_areas/24426/calendar.json?apikey=$123&=min_date=2018-08-31&per_page=10';
 
 
 describe('app component', () => {
