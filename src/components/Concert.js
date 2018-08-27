@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
 
+const MAXIMUM_PRICE = 600;
+
 class Concert extends Component {
 
   handleClick(e) {
@@ -8,12 +10,14 @@ class Concert extends Component {
 
     fetch('http://localhost:9292/blocks/create', {
       method: 'POST',
-      body: JSON.stringify( { 'params': {'sender': '000000000', 'receiver': '000000000', 'name': this.props.concert.name, 'value': this.props.concert.price} } )
+      body: JSON.stringify( { 'params': {'sender': '000000000', 'receiver': '000000000', 'name': this.props.concert.name, 'value': '100'} } )
     });
   }
 
-
-
+  getPrice(name) {
+    var re = name.length * 11 + name.charCodeAt(0) % MAXIMUM_PRICE;
+    return re;
+  }
 
   render() {
     return (
@@ -21,6 +25,7 @@ class Concert extends Component {
         <p>Concert: {this.props.concert.displayName}</p>
         <p>Location: {this.props.concert.location.city}</p>
         <p>Date: {this.props.concert.start.date}</p>
+        <p>Price: {this.getPrice(this.props.concert.displayName)}</p>
         <Button onClick={(e) => this.handleClick(e)}>
           Buy!
         </Button>
