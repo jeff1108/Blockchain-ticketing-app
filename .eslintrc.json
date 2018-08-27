@@ -19,9 +19,11 @@
       "propWrapperFunctions": [ "forbidExtraProps" ]
     },
     "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
+         "ecmaVersion": 6,
+         "sourceType": "module",
+         "ecmaFeatures": {
+             "jsx": true
+         },
         "ecmaVersion": 2018,
         "sourceType": "module"
     },
@@ -31,7 +33,7 @@
     "rules": {
         "indent": [
             "error",
-            4
+            2
         ],
         "linebreak-style": [
             "error",
