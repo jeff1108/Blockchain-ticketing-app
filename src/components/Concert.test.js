@@ -19,4 +19,8 @@ describe('concerts component', () => {
   it('render a concert date in the correct format', () => {
     expect(event.find('p').at(2).text()).toEqual('Date: 31/08/2018');
   });
+
+  it('render a concert price', () => {
+    expect(event.find('p').at(3).text()).toEqual('Price: 217');
+  });
 });
