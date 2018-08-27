@@ -1,8 +1,8 @@
 import React from 'react';
 import Concert from './Concert';
 import { mount } from 'enzyme';
-import { concert } from '../data/fixtures';
-
+import { concert, details } from '../data/fixtures';
+import { fakeServer } from 'sinon';
 
 const props = { concert };
 
