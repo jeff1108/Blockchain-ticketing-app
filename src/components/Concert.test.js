@@ -23,4 +23,42 @@ describe('concerts component', () => {
   it('render a concert price', () => {
     expect(event.find('p').at(3).text()).toEqual('Price: 217');
   });
+
+  describe('buy button', () => {
+    var server = fakeServer.create();
+    beforeEach(() => {
+      server.respondWith(
+        'POST',
+        '/blocks/create',
+        [
+          200,
+          {'Content-Type': 'application/json'},
+          JSON.stringify(details)
+        ]
+      );
+    });
+
+    it('fetch a post request', (done) => {
+      // define the request;  <- test here
+      // call server.respond();
+      // request of Post / URL
+      fetch('/blocks/create', {
+        method: 'POST',
+        body: JSON.stringify(
+          {
+            'params':
+              {
+                'sender': '000000000',
+                'receiver': '000000000',
+                'name': 'this.props.concert.displayName',
+                'value': '12341234312'
+              }
+          })
+      }).then(response => {
+        expect(response.status).toEqual(200);
+        done();
+      });
+      server.respond();
+    });
+  });
 });
