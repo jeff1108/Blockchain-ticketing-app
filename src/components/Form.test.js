@@ -1,9 +1,9 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import Address_form from './Address_form';
+import Form from './Form';
 
-describe('Address_form', () => {
-    const address_form = mount(<Address_form />);
+describe('Form', () => {
+    const form = mount(<Form />);
     it('renders the submit button', () => {
         expect(address_form.find('form').text()).toEqual('Submit');
     });
