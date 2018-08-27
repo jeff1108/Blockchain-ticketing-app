@@ -1,13 +1,17 @@
+import Main from './Main';
+import Form from './Form';
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class App extends Component {
-    render() {
+    render() { 
         return (
             <div>
-                <h2>Hello World!</h2>
+            <Main />
             </div>
         );
     }
 }
 
 export default App;
+
