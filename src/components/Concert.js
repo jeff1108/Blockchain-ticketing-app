@@ -12,12 +12,18 @@ class Concert extends Component {
     });
   }
 
+  getDate(date) {
+    var newDate = new Date(date);
+    var re = newDate.toLocaleDateString();
+    return re;
+  }
+
   render() {
     return (
       <div className='concert'>
         <p>Concert: {this.props.concert.displayName}</p>
         <p>Location: {this.props.concert.location.city}</p>
-        <p>Date: {this.props.concert.start.date}</p>
+        <p>Date: {this.getDate(this.props.concert.start.date)}</p>
         <Button onClick={(e) => this.handleClick(e)}>
           Buy!
         </Button>
