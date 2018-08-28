@@ -32,8 +32,8 @@ class App extends Component {
           })
         }
         <footer className='App-footer'>
-          <div className='credits'>Credits go here</div>
-          <div className='songkick_logo'>Logo goes here</div>
+          <div className='credits'>A final group project at Makers Academy in August 2018.</div>
+          <div className='songkick_logo'><img width={200} alt='Powered by Songkick' src={require('../images/by-songkick-pink.png')} /></div>
         </footer>
       </div>
     );
