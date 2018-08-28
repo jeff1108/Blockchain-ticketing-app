@@ -5,14 +5,15 @@ import { concerts } from '../data/fixtures';
 import { fakeServer } from 'sinon';
 
 const props = { concert: concerts[0] };
+const callUrl = '/api/3.0/metro_areas/24426/calendar.json?apikey=$123&=min_date=2018-08-31&per_page=10';
+
 
 describe('app component', () => {
+  var server = fakeServer.create();
   beforeEach(() => {
-    const server = fakeServer.create();
-
     server.respondWith(
       'GET',
-      'https://api.songkick.com/api/3.0/metro_areas/24426/calendar.json?apikey=$123&=min_date=2018-08-31&per_page=10',
+      callUrl,
       [
         200,
         {'Content-Type': 'application/json' },
@@ -21,12 +22,17 @@ describe('app component', () => {
     );
   });
 
-  describe('when creating a new concerts', () => {
-
-    it('renders the App title', () => {
-      const app = mount(<App {...props} />);
-      const text = app.find('h2').text();
-      expect(text).toEqual('Checkout concerts in your area:');
+  it('fetch the song api', (done) => {
+    fetch(callUrl, {method: 'GET'}).then(response => {
+      expect(response.status).toEqual(200);
+      done();
     });
+    server.respond();
+  });
+
+  it('renders the App title', () => {
+    let app = mount(<App {...props} />);
+    let text = app.find('h2').text();
+    expect(text).toEqual('Checkout concerts in your area:');
   });
 });
