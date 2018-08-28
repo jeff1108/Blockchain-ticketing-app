@@ -1,6 +1,6 @@
 import React from 'react';
 import Tickets from './Tickets';
-import { mount, shallow } from 'enzyme';
+import { shallow } from 'enzyme';
 import { concerts } from '../data/fixtures';
 import { fakeServer } from 'sinon';
 
@@ -22,17 +22,17 @@ describe('ticket component', () => {
     );
   });
 
-    it('fetch the song api', (done) => {
-      fetch(callUrl, {method: 'GET'}).then(response => {
-        expect(response.status).toEqual(200);
-        done();
-      });
-      server.respond();
+  it('fetch the song api', (done) => {
+    fetch(callUrl, {method: 'GET'}).then(response => {
+      expect(response.status).toEqual(200);
+      done();
     });
+    server.respond();
+  });
 
-    it('renders the ticket title', () => {
-      const ticket = shallow(<Tickets {...props} />);
-      const text = ticket.find('h2').at(0).text();
-      expect(text).toEqual('Checkout concerts in your area:');
-    });
+  it('renders the ticket title', () => {
+    const ticket = shallow(<Tickets {...props} />);
+    const text = ticket.find('h2').at(0).text();
+    expect(text).toEqual('Checkout concerts in your area:');
+  });
 });

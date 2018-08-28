@@ -1,7 +1,7 @@
 import { Switch, Route } from 'react-router-dom';
-import React from 'react'
+import React from 'react';
 import Details from './Details';
-import Tickets from './Tickets'
+import Tickets from './Tickets';
 
 
 const Main = () => (
@@ -12,6 +12,6 @@ const Main = () => (
       <Route exact path='/form' component={Details}/>
     </Switch>
   </main>
-)
+);
 
 export default Main;
