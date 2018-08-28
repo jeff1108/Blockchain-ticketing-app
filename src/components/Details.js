@@ -26,27 +26,30 @@ class Details extends Component {
 
   render() {
     return (
-      <Form>
-        <FormControl 
-          name='firstName'
-          placeholder='First name'
-          value={this.state.firstName}
-          onChange={ (e) => { this.handleChange(e); } }/>
-        <br />
-        <FormControl 
-          name='lastName'
-          placeholder='Last name'
-          value={this.state.lastName}
-          onChange={ (e) => { this.handleChange(e); } }/>
-        <br />
-        <FormControl 
-          name='email'
-          placeholder='Email'
-          value={this.state.email}
-          onChange={ (e) => { this.handleChange(e); } }/>
-        <br />
-        <Button onClick={ (e) => this.handleSubmit(e) }>Submit</Button>
-      </Form>
+      <div>  
+        <h2>Please Enter Your Details</h2>
+        <Form>
+          <FormControl 
+            name='firstName'
+            placeholder='First name'
+            value={this.state.firstName}
+            onChange={ (e) => { this.handleChange(e); } }/>
+          <br />
+          <FormControl 
+            name='lastName'
+            placeholder='Last name'
+            value={this.state.lastName}
+            onChange={ (e) => { this.handleChange(e); } }/>
+          <br />
+          <FormControl 
+            name='email'
+            placeholder='Email'
+            value={this.state.email}
+            onChange={ (e) => { this.handleChange(e); } }/>
+          <br />
+          <Button onClick={ (e) => this.handleSubmit(e) }>Submit</Button>
+        </Form>
+      </div>
     );
   }
 }
