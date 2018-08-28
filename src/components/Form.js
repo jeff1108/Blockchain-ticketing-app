@@ -8,7 +8,6 @@ class Form extends React.Component {
   constructor(props) {
     super(props);
     this.state = {firstName: '', lastName: '', email: ''};
-
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -37,7 +36,7 @@ class Form extends React.Component {
           placeholder="First name"
           value={this.state.firstName}
           onChange={this.handleChange}
-        />
+         />
         <br />
         <input
           name="lastName"
@@ -51,7 +50,7 @@ class Form extends React.Component {
           placeholder="email"
           value={this.state.email}
           onChange={this.handleChange}
-        />
+          />
         <br />
       <div className="submit">
         <input type="submit" value="submit" />
