@@ -35,4 +35,11 @@ describe('app component', () => {
     let text = app.find('h2').text();
     expect(text).toEqual('Checkout concerts in your area:');
   });
+
+  it('renders a footer with credits and API logo', () => {
+    let app = mount(<App {...props} />);
+    expect(app.exists('.App-footer')).toEqual(true);
+    expect(app.exists('.credits')).toEqual(true);
+    expect(app.exists('.songkick_logo')).toEqual(true);
+  });
 });

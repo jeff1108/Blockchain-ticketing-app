@@ -31,6 +31,10 @@ class App extends Component {
             );
           })
         }
+        <footer className='App-footer'>
+          <div className='credits'>Credits go here</div>
+          <div className='songkick_logo'>Logo goes here</div>
+        </footer>
       </div>
     );
   }
