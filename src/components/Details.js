@@ -26,22 +26,22 @@ class Details extends Component {
 
   render() {
     return (
-      <div>  
+      <div>
         <h2>Please Enter Your Details</h2>
         <Form>
-          <FormControl 
+          <FormControl
             name='firstName'
             placeholder='First name'
             value={this.state.firstName}
             onChange={ (e) => { this.handleChange(e); } }/>
           <br />
-          <FormControl 
+          <FormControl
             name='lastName'
             placeholder='Last name'
             value={this.state.lastName}
             onChange={ (e) => { this.handleChange(e); } }/>
           <br />
-          <FormControl 
+          <FormControl
             name='email'
             placeholder='Email'
             value={this.state.email}

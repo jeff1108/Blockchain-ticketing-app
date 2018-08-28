@@ -1,15 +1,25 @@
 import React from 'react';
 import Tickets from './Tickets';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import { concerts } from '../data/fixtures';
 import { fakeServer } from 'sinon';
 
-const props = { concert: concerts[0] };
 const callUrl = '/api/3.0/metro_areas/24426/calendar.json?apikey=$123&=min_date=2018-08-31&per_page=10';
 
 
 describe('ticket component', () => {
-  var server = fakeServer.create();
+  let location= {
+    state: {
+      userDetails:
+              {
+                firstName: 'firstName',
+                lastName: 'lastName',
+                email: 'email'
+              }
+    }
+  };
+  let ticket = mount(<Tickets location={location}/>);
+  let server = fakeServer.create();
   beforeEach(() => {
     server.respondWith(
       'GET',
@@ -31,8 +41,12 @@ describe('ticket component', () => {
   });
 
   it('renders the ticket title', () => {
-    const ticket = shallow(<Tickets {...props} />);
-    const text = ticket.find('h2').at(0).text();
+    let text = ticket.find('h3').at(0).text();
     expect(text).toEqual('Checkout concerts in your area:');
+  });
+
+  it('renders displays users firs and last name', () => {
+    let text = ticket.find('h2').at(0).text();
+    expect(text).toEqual('Welcome firstName lastName');
   });
 });
