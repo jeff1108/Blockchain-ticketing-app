@@ -1,7 +1,5 @@
 import Main from './Main';
-import Form from './Form';
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 export class App extends Component {
     render() { 

@@ -1,8 +1,6 @@
-import { Switch, Route } from 'react-router-dom'
-import { BrowserRouter } from "react-router-dom";
-import React, { Component } from 'react'
+import { Switch, Route } from 'react-router-dom';
+import React from 'react'
 import Form from './Form';
-import Submit from './Form'
 import Tickets from './Tickets'
 
 
