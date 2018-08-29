@@ -45,7 +45,7 @@ describe('ticket component', () => {
     expect(text).toEqual('Checkout concerts in your area:');
   });
 
-  it('renders displays users firs and last name', () => {
+  it('renders displays users first and last name', () => {
     let text = ticket.find('h2').at(0).text();
     expect(text).toEqual('Welcome firstName lastName');
   });
