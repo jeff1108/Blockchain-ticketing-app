@@ -1,10 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Main from './components/Main';
-import { BrowserRouter } from 'react-router-dom';
+import Logo from './components/Logo';
 
-ReactDOM.render(
-  <BrowserRouter>
-    <Main />
-  </BrowserRouter>
-  , document.getElementById('root'));
+ReactDOM.render(<Logo />, document.getElementById('root'));
