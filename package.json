@@ -31,5 +31,9 @@
     "gh-pages": "^1.2.0",
     "react-test-renderer": "^16.4.2",
     "sinon": "^6.1.5"
+  },
+  "jest": {
+    "collectCoverageFrom": ["src/components/*.js",
+                            "!src/components/Main.js"]
   }
 }
