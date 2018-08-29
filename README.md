@@ -4,11 +4,11 @@
 
 ## Blockchain Ticketing APP (Front-end)
 
-This repository represents the Front-end element to our project, while the Sinatra/ruby Back-end "blockchain" repository [can be found here](https://github.com/bilfar/blockchain-backend-ruby).
+This repository represents the Front-end element to our project, while the Sinatra/Ruby Back-end "blockchain" repository [can be found here](https://github.com/bilfar/blockchain-backend-ruby).
 
 A blockchain-based ticketing app that allows users to purchase concert tickets and stores the validated transactions on a blockchain network. Created as part of our final project for the Makers Academy bootcamp during August 2018.
 
-Via the front-end, a user can fill in his or her first-name, last-name and email-address. The user then can find a concert and buy a ticket. The back-end handles the request and creates a transaction(ticket). The back-end then sends a “thank you for your buy. This is your ticket number” message to the user. After the transaction(ticket) is created, the transaction is then marked as “unverified”. The miner can use his/her computer power processor to create a block on the transactions. The transactions now a are marked as a verified, and the miner get rewarded.
+Via the front-end, a user can fill in his or her first-name, last-name and email-address,  their details are then hashed in to a wallet address. The user then can find a concert and buy a ticket. The back-end handles the request and creates a transaction(ticket). The back-end then sends a “thank you for your purchase. This is your ticket number” message to the user. After the transaction(ticket) is created, the transaction is then marked as “unverified”. The miner can use his/her computer power processor to create a block of the transactions. The transactions now are marked as verified, stored on the public blockchain  and the miner gets rewarded with tokens.
 
 You can [read our full project log here](https://hackmd.io/FugFiGBnQ0ivaJpLaANYhQ).
 
@@ -17,8 +17,12 @@ You can [read our full project log here](https://hackmd.io/FugFiGBnQ0ivaJpLaANYh
 * A simple app that allows a user to see available concert tickets and make a purchase.
 * A 'dummy' blockchain built on Ruby that sends ticket transactions to a Postgres database.
 
+### Final product
+* Ticket app takes user information.
+* Connect to an API for concert information.
+* Sends information as a JSON the backend server.
 
-### First Sprint (21-22 August)
+### User stories purchaser
 ```
 As a frequent concert goer,
 So that I can see what concerts are available,
@@ -36,10 +40,9 @@ I want a confirmation with my ticket number
 ```
 
 ## Technologies used
-| Stack    | Technologies Used | Test Suites |
-| -------- | ----------------- | ----------- |
-| Front-end | React, Javascript, HTML, CSS     | Enzyme, Jest |
-
+| Technologies Used | Test Suites |
+| ----------------- | ----------- |
+|  React, Javascript, HTML, CSS     | Enzyme, Jest |
 
 
 ## To run application
