@@ -38,7 +38,7 @@ I want a confirmation with my ticket number
 ## Technologies used
 | Stack    | Technologies Used | Test Suites |
 | -------- | ----------------- | ----------- |
-| Frontend | React, Javascript, HTML, CSS     | Enzyme, Jest |
+| Front-end | React, Javascript, HTML, CSS     | Enzyme, Jest |
 
 
 
@@ -59,7 +59,7 @@ On a another terminal `npm run cypress:open`
 
 ### To run component tests
 
-`npm test`
+`npm test -- --coverage`
 
 
 ## Learning Outcomes
