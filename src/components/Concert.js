@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
+import { Redirect, withRouter } from 'react-router-dom';
 
 const MAXIMUM_PRICE = 600;
 const RECEIVER_ADDRESS = '525410238F3386EECD7E7D4682E124B193B41DDC3FF9D36AADE4406F07A83E2A';
@@ -23,6 +24,7 @@ class Concert extends Component {
             }
         })
     });
+    this.props.history.push('/confirmation');
   }
 
   getPrice(name) {
@@ -51,4 +53,4 @@ class Concert extends Component {
   }
 }
 
-export default Concert;
+export default withRouter(Concert);

@@ -4,10 +4,12 @@ import { mount } from 'enzyme';
 import { concert, details } from '../data/fixtures';
 import { fakeServer } from 'sinon';
 
+
 const props = { concert };
 
 describe('concerts component', () => {
-  let event = mount(<Concert {...props} />);
+  let event = mount (<Concert.WrappedComponent {...props} />);
+
   it('renders a concert name', () => {
     expect(event.find('p').at(0).text()).toEqual(`Concert: ${concert.displayName}`);
   });
