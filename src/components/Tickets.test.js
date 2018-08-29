@@ -1,15 +1,25 @@
 import React from 'react';
-import App from './App';
+import Tickets from './Tickets';
 import { mount } from 'enzyme';
 import { concerts } from '../data/fixtures';
 import { fakeServer } from 'sinon';
 
-const props = { concert: concerts[0] };
 const callUrl = '/api/3.0/metro_areas/24426/calendar.json?apikey=$123&=min_date=2018-08-31&per_page=10';
 
 
-describe('app component', () => {
-  var server = fakeServer.create();
+describe('ticket component', () => {
+  let location= {
+    state: {
+      userDetails:
+              {
+                firstName: 'firstName',
+                lastName: 'lastName',
+                email: 'email'
+              }
+    }
+  };
+  let ticket = mount(<Tickets location={location}/>);
+  let server = fakeServer.create();
   beforeEach(() => {
     server.respondWith(
       'GET',
@@ -30,16 +40,13 @@ describe('app component', () => {
     server.respond();
   });
 
-  it('renders the App title', () => {
-    let app = mount(<App {...props} />);
-    let text = app.find('h2').text();
+  it('renders the ticket title', () => {
+    let text = ticket.find('h3').at(0).text();
     expect(text).toEqual('Checkout concerts in your area:');
   });
 
-  it('renders a footer with credits and API logo', () => {
-    let app = mount(<App {...props} />);
-    expect(app.exists('.App-footer')).toEqual(true);
-    expect(app.exists('.credits')).toEqual(true);
-    expect(app.exists('.songkick_logo')).toEqual(true);
+  it('renders displays users first and last name', () => {
+    let text = ticket.find('h2').at(0).text();
+    expect(text).toEqual('Welcome firstName lastName');
   });
 });

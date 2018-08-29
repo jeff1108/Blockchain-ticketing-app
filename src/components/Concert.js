@@ -10,7 +10,7 @@ class Concert extends Component {
   handleClick(e) {
     e.preventDefault();
 
-    fetch('http://localhost:9292/blocks/create', {
+    fetch('http://localhost:9292/transaction', {
       method: 'POST',
       body: JSON.stringify(
         {
