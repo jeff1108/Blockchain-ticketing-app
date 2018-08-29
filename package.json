@@ -33,7 +33,9 @@
     "sinon": "^6.1.5"
   },
   "jest": {
-    "collectCoverageFrom": ["src/components/*.js",
-                            "!src/components/Main.js"]
+    "collectCoverageFrom": [
+      "src/components/*.js",
+      "!src/components/Main.js"
+    ]
   }
 }
