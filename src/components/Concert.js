@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
 import { withRouter } from 'react-router-dom';
 
+// These constants are temporary measures and will eventually be replaced
 const MAXIMUM_PRICE = 600;
+const SENDER_ADDRESS = '61709B365969C742160B4A365A9D43216B118AD5B626D07B81FEDD4F88DA9943'
 const RECEIVER_ADDRESS = '525410238F3386EECD7E7D4682E124B193B41DDC3FF9D36AADE4406F07A83E2A';
 
 class Concert extends Component {
@@ -17,7 +19,7 @@ class Concert extends Component {
         {
           'params':
             {
-              'sender': '000000000',
+              'sender': SENDER_ADDRESS,
               'receiver': RECEIVER_ADDRESS,
               'name': this.props.concert.displayName,
               'value': this.getPrice(this.props.concert.displayName)
