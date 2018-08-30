@@ -4,10 +4,12 @@ import { mount } from 'enzyme';
 import { concert, details } from '../data/fixtures';
 import { fakeServer } from 'sinon';
 
+
 const props = { concert };
 
 describe('concerts component', () => {
-  let event = mount(<Concert {...props} />);
+  let event = mount (<Concert.WrappedComponent {...props} />);
+
   it('renders a concert name', () => {
     expect(event.find('p').at(0).text()).toEqual(`Concert: ${concert.displayName}`);
   });
@@ -39,9 +41,6 @@ describe('concerts component', () => {
     });
 
     it('fetch a post request', (done) => {
-      // define the request;  <- test here
-      // call server.respond();
-      // request of Post / URL
       fetch('/blocks/create', {
         method: 'POST',
         body: JSON.stringify(
@@ -60,5 +59,16 @@ describe('concerts component', () => {
       });
       server.respond();
     });
+  });
+
+  it('should render correctly', () => {
+    const historyMock = { push: jest.fn() };
+    const wrapper = mount (<Concert.WrappedComponent history={historyMock} {...props} />);
+    const handelClickSpy = jest.spyOn(wrapper.instance(), 'handleClick');
+    wrapper.find('Button').at(0).simulate('click', {
+      preventDefault: () => {
+      }
+    });
+    expect(handelClickSpy).toHaveBeenCalled();
   });
 });

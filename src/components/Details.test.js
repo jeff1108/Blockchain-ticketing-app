@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import Details from './Details';
 
 describe('Form', () => {
@@ -21,19 +21,28 @@ describe('Form', () => {
     let email = 'test@test.com';
     beforeEach(() => {
       address_form.find('FormControl').at(0).simulate('change', {
-        target: { value: firstname, name: 'firstName'} 
+        target: { value: firstname, name: 'firstName'}
       });
       address_form.find('FormControl').at(1).simulate('change', {
-        target: { value: lastname, name: 'lastName'} 
+        target: { value: lastname, name: 'lastName'}
       });
       address_form.find('FormControl').at(2).simulate('change', {
-        target: { value: email, name: 'email'} 
+        target: { value: email, name: 'email'}
       });
     });
     it('update the state', () => {
       expect(address_form.state()).toEqual({firstName: 'testfirst', lastName: 'testlast', email: 'test@test.com'});
     });
+
+    it('should render correctly', () => {
+      const historyMock = { push: jest.fn() };
+      const wrapper = shallow(<Details history={historyMock} />);
+      const handelSubmitSpy = jest.spyOn(wrapper.instance(), 'handleSubmit');
+      wrapper.find('Button').at(0).simulate('click', {
+        preventDefault: () => {
+        }
+      });
+      expect(handelSubmitSpy).toHaveBeenCalled();
+    });
   });
 });
-
-

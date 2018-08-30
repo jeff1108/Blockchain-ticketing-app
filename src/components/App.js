@@ -2,7 +2,7 @@ import Main from './Main';
 import React, { Component } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
-export class Logo extends Component {
+export class App extends Component {
   render() {
     return (
       <div>
@@ -18,4 +18,4 @@ export class Logo extends Component {
   }
 }
 
-export default Logo;
+export default App;
