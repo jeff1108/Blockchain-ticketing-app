@@ -41,9 +41,6 @@ describe('concerts component', () => {
     });
 
     it('fetch a post request', (done) => {
-      // define the request;  <- test here
-      // call server.respond();
-      // request of Post / URL
       fetch('/blocks/create', {
         method: 'POST',
         body: JSON.stringify(
@@ -62,5 +59,16 @@ describe('concerts component', () => {
       });
       server.respond();
     });
+  });
+
+  it('should render correctly', () => {
+    const historyMock = { push: jest.fn() };
+    const wrapper = mount (<Concert.WrappedComponent history={historyMock} {...props} />);
+    const handelClickSpy = jest.spyOn(wrapper.instance(), "handleClick");
+    wrapper.find('Button').at(0).simulate('click', {
+      preventDefault: () => {
+      }
+    });
+    expect(handelClickSpy).toHaveBeenCalled();
   });
 });
