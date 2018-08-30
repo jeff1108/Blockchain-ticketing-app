@@ -23,6 +23,37 @@ html, body {
   width: 95%;
 }
 
+.concerts-container {
+  width: 80%;
+}
+
+.concert {
+  background-color: black;
+  display: inline-block;
+  width: 25%;
+  margin: 20px;
+}
+
+.concerts-container {
+  background-color: white;
+  border-radius: 18px;
+  box-shadow: 0 5px 4px #E2E4EA;
+  margin-left: auto;
+  margin-top: 0;
+  margin-right: auto;
+  text-align: center;
+  padding: 25px;
+  width: 95%;
+}
+
+.concerts-container h2, h3 {
+  margin: 0;
+}
+
+.concerts-container h2 {
+  color: #FB0041;
+}
+
 .user-form {
   background-color: white;
   border-radius: 18px;

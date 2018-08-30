@@ -25,17 +25,17 @@ class Tickets extends Component {
     const lastName = this.props.location.state.userDetails.lastName;
     return (
       <div className='App'>
-        <header className='App-header'>
+        <div className='concerts-container'>
           <h2>Welcome {firstName} {lastName}</h2>
-          <h3 className='App-title'>Check out concerts in your area:</h3>
-        </header>
-        {
-          this.state.concerts.map((concert, index) => {
-            return (
-              <Concert key={index} concert={concert} />
-            );
-          })
-        }
+          <h3 className='App-title'>Check out concerts in your area</h3>
+          {
+            this.state.concerts.map((concert, index) => {
+              return (
+                <Concert key={index} concert={concert} />
+              );
+            })
+          }
+        </div>
       </div>
     );
   }
