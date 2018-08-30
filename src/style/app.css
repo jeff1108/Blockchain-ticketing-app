@@ -1,5 +1,5 @@
 html, body {
-  background-color: #fdfffc;
+  background-color: #EFF2F2;
   font-family: 'Helvetica Neue', 'Arial', sans-serif;
   height: 100%;
   margin: 0 !important;
@@ -17,7 +17,35 @@ html, body {
 }
 
 .content {
-  background-color: black;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  width: 95%;
+}
+
+.user-form {
+  background-color: white;
+  border-radius: 18px;
+  box-shadow: 0 5px 4px #E2E4EA;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 25px;
+  width: 40%;
+}
+
+.user-form p {
+  color: #757575;
+  line-height: 1.5em;
+}
+
+.user-form a {
+  color: #FB0041;
+  text-decoration: none;
+}
+
+.user-form h2 {
+  margin: 0;
 }
 
 h1 {
@@ -31,13 +59,14 @@ h1 {
 
 .App-header {
   background-color: white;
+  /*border-top: 5px solid #757575;*/
   box-shadow: 0 5px 4px #E2E4EA;
   height: 70px;
 }
 
 .header-links {
   float: right;
-  padding: 27px 30px 10px 20px;
+  padding: 25px 30px 10px 20px;
 }
 
 .header-links a {
@@ -52,8 +81,12 @@ h1 {
   margin: 0 0 0 50px;
 }
 
+#intro-text {
+  color: #FB0441;
+}
+
 .App-footer {
-  background-color: #fdfffc;
+  background-color: #EFF2F2;
   bottom: 2%;
   position: fixed;
   width: 100%;
@@ -78,6 +111,38 @@ h1 {
   margin: 0 0 3px 0;
 }
 
-.songkick_logo {
+.btn-primary {
+  background-color: #FB0241;
+  background-image: none;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  letter-spacing: 2px;
+  margin: 20px 0 0 0;
+  font-size: 16px;
+  display: inline-block;
+  cursor: pointer;
+  width: 160px;
+}
 
+.btn-primary:hover {
+  background-color: #E7033D;
+}
+
+h3 {
+  color: #757575;
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
+  font-weight: normal;
+  letter-spacing: 1px;
+  margin: 10px auto 20px auto;
+}
+
+#firstName, #lastName, #email {
+  font-size: 15px;
+  margin: 7px;
+  height: 40px;
+  text-align: center;
+  width: 300px;
 }

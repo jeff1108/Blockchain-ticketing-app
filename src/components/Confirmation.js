@@ -5,11 +5,10 @@ class Confirmation extends Component {
 
   render() {
     return (
-      <div className='success'>
-        <p>Thank you for your purchase, your ticket will be sent to your email</p>
-        <p>Your transaction is now recorded on the
-          <a href='http://localhost:9292'> Block Chain </a>
-        </p>
+      <div className='user-form'>
+        <h2 id='intro-text'>Your ticket is on the chain!</h2>
+        <h3>Thank you for your purchase</h3>
+        <p>A record of your transaction has been permanently<br />stored on the blockchain and <a href='https://blockheads-backend.herokuapp.com/'>can be viewed here</a></p>
       </div>
     );
   }

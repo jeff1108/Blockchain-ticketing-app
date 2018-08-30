@@ -26,9 +26,9 @@ export class App extends Component {
         <div className='App-footer'>
           <a href='https://www.songkick.com/'>
             <div className='footer-container'>
-              <div className='credits'>Concert information powered</div>
+              <div className='credits'>concert information powered</div>
               <div className='songkick_logo'>
-                <img width={150} alt='Powered by Songkick' src={require('../images/by-songkick-pink.png')} />
+                <img width={150} alt='powered by Songkick' src={require('../images/by-songkick-pink.png')} />
               </div>
             </div>
           </a>
