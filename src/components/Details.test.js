@@ -36,8 +36,8 @@ describe('Form', () => {
 
     it('should render correctly', () => {
       const historyMock = { push: jest.fn() };
-      const wrapper = shallow(<Details history={historyMock} />)
-      const handelSubmitSpy = jest.spyOn(wrapper.instance(), "handleSubmit");
+      const wrapper = shallow(<Details history={historyMock} />);
+      const handelSubmitSpy = jest.spyOn(wrapper.instance(), 'handleSubmit');
       wrapper.find('Button').at(0).simulate('click', {
         preventDefault: () => {
         }

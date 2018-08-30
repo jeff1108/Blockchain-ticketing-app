@@ -64,7 +64,7 @@ describe('concerts component', () => {
   it('should render correctly', () => {
     const historyMock = { push: jest.fn() };
     const wrapper = mount (<Concert.WrappedComponent history={historyMock} {...props} />);
-    const handelClickSpy = jest.spyOn(wrapper.instance(), "handleClick");
+    const handelClickSpy = jest.spyOn(wrapper.instance(), 'handleClick');
     wrapper.find('Button').at(0).simulate('click', {
       preventDefault: () => {
       }
