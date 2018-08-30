@@ -64,7 +64,6 @@ On a another terminal `npm run cypress:open`
 
 `npm test -- --coverage`
 
-
 ## Learning Outcomes
 To be completed at end of project
 
