@@ -3,6 +3,7 @@ import React from 'react';
 import Details from './Details';
 import Tickets from './Tickets';
 import Confirmation from './Confirmation';
+import css from '../style/main.css';
 
 
 const Main = () => (

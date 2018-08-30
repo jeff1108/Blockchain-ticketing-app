@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import css from '../style/confirmation.css';
 
 class Confirmation extends Component {
 

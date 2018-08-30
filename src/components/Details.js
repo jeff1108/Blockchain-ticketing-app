@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Form, FormControl, Button } from 'react-bootstrap';
+import css from '../style/details.css';
 
 class Details extends Component {
   constructor(props) {
