@@ -27,7 +27,7 @@ class Tickets extends Component {
       <div className='App'>
         <header className='App-header'>
           <h2>Welcome {firstName} {lastName}</h2>
-          <h3 className='App-title'>Checkout concerts in your area:</h3>
+          <h3 className='App-title'>Check out concerts in your area:</h3>
         </header>
         {
           this.state.concerts.map((concert, index) => {

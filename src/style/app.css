@@ -1,0 +1,83 @@
+html, body {
+  background-color: #fdfffc;
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
+  height: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+.container {
+  margin: 0;
+  min-height: 100%;
+}
+
+.content {
+  background-color: black;
+}
+
+h1 {
+  color: #757575;
+  font-size: 25px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  margin: 0;
+  /*text-shadow: 4px 4px #2b2d42;*/
+}
+
+.App-header {
+  background-color: white;
+  box-shadow: 0 5px 4px #E2E4EA;
+  height: 70px;
+}
+
+.header-links {
+  float: right;
+  padding: 27px 30px 10px 20px;
+}
+
+.header-links a {
+  color: #FB0041;
+  letter-spacing: 1px;
+  font-size: 17px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#space-left-link {
+  margin: 0 0 0 50px;
+}
+
+.App-footer {
+  background-color: #fdfffc;
+  bottom: 2%;
+  position: fixed;
+  width: 100%;
+}
+
+.footer-container {
+  display: inline-block;
+  margin: 20px auto 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+.header-text {
+  float: left;
+  padding: 20px 20px 20px 30px;
+}
+
+.credits {
+  color: #FB0041;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0 0 3px 0;
+}
+
+.songkick_logo {
+
+}
