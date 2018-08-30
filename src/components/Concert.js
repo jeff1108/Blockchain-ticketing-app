@@ -42,11 +42,11 @@ class Concert extends Component {
   render() {
     return (
       <div className='concert'>
-        <p id='concert-title'>{this.props.concert.displayName}</p>
+        <p id='concert-title'>{this.props.concert.displayName.substr(0, 30)}...</p>
         <p id='concert-location'>Location: {this.props.concert.location.city}</p>
         <p id='concert-date'>Date: {this.getDate(this.props.concert.start.date)}</p>
         <p id='concert-price'>Price: {this.getPrice(this.props.concert.displayName)} BKH</p>
-        <Button onClick={(e) => this.handleClick(e)}>
+        <Button id='concert-button' onClick={(e) => this.handleClick(e)}>
           Buy!
         </Button>
       </div>
