@@ -12,13 +12,13 @@ class Concert extends Component {
   handleClick(e) {
     e.preventDefault();
 
-    fetch('http://localhost:9292/transaction', {
+    fetch('https://blockheads-backend.herokuapp.com/transaction', {
       method: 'POST',
       body: JSON.stringify(
         {
           'params':
             {
-              'sender': '000000000',
+              'sender': '74D87350D1774E28BB716CBD72F0AEB339705157EC105426F312A351DC23AED3',
               'receiver': RECEIVER_ADDRESS,
               'name': this.props.concert.displayName,
               'value': this.getPrice(this.props.concert.displayName)
@@ -47,7 +47,7 @@ class Concert extends Component {
         <p id='concert-date'>Date: {this.getDate(this.props.concert.start.date)}</p>
         <p id='concert-price'>Price: {this.getPrice(this.props.concert.displayName)} BKH</p>
         <Button id='concert-button' onClick={(e) => this.handleClick(e)}>
-          Buy!
+          BUY!
         </Button>
       </div>
     );

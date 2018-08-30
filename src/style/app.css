@@ -24,7 +24,7 @@ html, body {
 .content {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 50px;
+  margin-top: 40px;
   width: 95%;
 }
 
@@ -50,7 +50,15 @@ html, body {
 }
 
 #concert-button {
+  border: none;
+  color: white;
+  background-color: #FB0041;
+  background-image: none;
+  border-radius: 4px;
+  font-size: 14px;
   margin: 15px 0 0 0;
+  height: 30px;
+  width: 100px;
 }
 
 .concerts-container {
@@ -96,6 +104,10 @@ html, body {
 
 .user-form h2 {
   margin: 0;
+}
+
+#concert-button:hover {
+  background-color: #E7033D;
 }
 
 h1 {
@@ -195,4 +207,8 @@ h3 {
   height: 40px;
   text-align: center;
   width: 300px;
+}
+
+.songkick_logo {
+  margin: 0 0 20px 0;
 }
