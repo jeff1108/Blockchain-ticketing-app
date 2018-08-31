@@ -42,7 +42,7 @@ describe('ticket component', () => {
 
   it('renders the ticket title', () => {
     let text = ticket.find('h3').at(0).text();
-    expect(text).toEqual('Check out concerts in your area:');
+    expect(text).toEqual('Check out concerts in your area');
   });
 
   it('renders displays users first and last name', () => {

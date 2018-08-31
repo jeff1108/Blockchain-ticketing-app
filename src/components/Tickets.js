@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Concert from './Concert';
-import css from '../style/tickets.css';
 
 const API_KEY = 'btZu4eInD0uJ4SPK';
 const DATE = new Date().toISOString().slice(0,10);

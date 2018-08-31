@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Form, FormControl, Button } from 'react-bootstrap';
-import css from '../style/details.css';
 
 class Details extends Component {
   constructor(props) {
@@ -52,7 +51,7 @@ class Details extends Component {
             value={this.state.email}
             onChange={ (e) => { this.handleChange(e); } }/>
           <br />
-          <Button className='btn btn-primary' onClick={ (e) => this.handleSubmit(e) }>SUBMIT</Button>
+          <Button className='btn btn-primary' id='submit-button-id' onClick={ (e) => this.handleSubmit(e) }>SUBMIT</Button>
         </Form>
       </div>
     );
