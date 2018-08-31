@@ -6,6 +6,6 @@ describe('Visit Tickets page', () => {
     cy.get('#email').type('test@test.com');
     cy.get('button').click();
     cy.get('button').first().click();
-    cy.contains('Thank you for your purchase, your ticket will be sent to your email');
+    cy.contains('Your ticket is on the chain!');
   });
 });

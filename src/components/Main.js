@@ -4,7 +4,6 @@ import Details from './Details';
 import Tickets from './Tickets';
 import Confirmation from './Confirmation';
 
-
 const Main = () => (
   <main>
     <Switch>

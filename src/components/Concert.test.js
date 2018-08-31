@@ -11,7 +11,7 @@ describe('concerts component', () => {
   let event = mount (<Concert.WrappedComponent {...props} />);
 
   it('renders a concert name', () => {
-    expect(event.find('p').at(0).text()).toEqual(`Concert: ${concert.displayName}`);
+    expect(event.find('p').at(0).text()).toEqual(`${concert.displayName}...`);
   });
 
   it('render a concert location', () => {
@@ -23,7 +23,7 @@ describe('concerts component', () => {
   });
 
   it('render a concert price', () => {
-    expect(event.find('p').at(3).text()).toEqual('Price: 217');
+    expect(event.find('p').at(3).text()).toEqual('Price: 217 BKH');
   });
 
   describe('buy button', () => {
