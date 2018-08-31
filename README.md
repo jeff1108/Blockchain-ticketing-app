@@ -76,7 +76,6 @@ On a another terminal `npm run cypress:open`
 ## Future/Further Improvements
 - Payment page to allow users to pay for their tickets  
 - Currently the prices of tickets are hard coded as the third party API does not provide this information
-- The
 - Given more time we would like to refactor and improve our REACT code structure
 - Build a ticket validation system for the venues to verify the tickets  
 
