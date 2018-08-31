@@ -1,44 +1,41 @@
+import Main from './Main';
 import React, { Component } from 'react';
-import Concert from './Concert';
-const API_KEY = 'btZu4eInD0uJ4SPK';
-const DATE = new Date().toISOString().slice(0,10);
+import { BrowserRouter } from 'react-router-dom';
+import '../style/app.css';
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      concerts: []
-    };
-  }
-
-  componentDidMount() {
-    fetch(`https://api.songkick.com/api/3.0/metro_areas/24426/calendar.json?apikey=${API_KEY}&=min_date=${DATE}&per_page=10`)
-      .then(response => response.json())
-      .then(json => {this.setState({concerts: json.resultsPage.results.event});
-      });
-  }
-
+export class App extends Component {
   render() {
     return (
-      <div className='App'>
-        <header className='App-header'>
-          <h2 className='App-title'>Checkout concerts in your area:</h2>
-        </header>
-        {
-          this.state.concerts.map((concert, index) => {
-            return (
-              <Concert key={index} concert={concert} />
-            );
-          })
-        }
-        <footer className='App-footer'>
-          <div className='credits'>A final group project at Makers Academy in August 2018.</div>
-          <div className='songkick_logo'><img width={200} alt='Powered by Songkick' src={require('../images/by-songkick-pink.png')} /></div>
-        </footer>
+      <div className='container'>
+        <div className='App-header'>
+          <a href='/'>
+            <div className='header-text'>
+              <h1>✔ ticketchain</h1>
+            </div>
+          </a>
+          <div className='header-links'>
+            <a href='/'>BUY TICKETS</a>
+            <a href='https://blockheads-backend.herokuapp.com/' id='space-left-link'>VIEW BLOCKCHAIN</a>
+          </div>
+        </div>
+        <div className='content'>
+          <BrowserRouter>
+            <Main />
+          </BrowserRouter>
+        </div>
+        <div className='App-footer'>
+          <a href='https://www.songkick.com/'>
+            <div className='footer-container'>
+              <div className='credits'>concert information powered</div>
+              <div className='songkick_logo'>
+                <img width={150} alt='powered by Songkick' src={require('../images/by-songkick-pink.png')} />
+              </div>
+            </div>
+          </a>
+        </div>
       </div>
     );
   }
 }
-
 
 export default App;
