@@ -26,9 +26,10 @@ class Details extends Component {
 
   render() {
     return (
-      <div>
-        <h2>Please Enter Your Details</h2>
-        <Form>
+      <div className='user-form'>
+        <h2 id='intro-text'>Blockchain verified tickets!</h2>
+        <h3>Register to find events near you</h3>
+        <Form className='input-form'>
           <FormControl
             id='firstName'
             name='firstName'
@@ -50,7 +51,7 @@ class Details extends Component {
             value={this.state.email}
             onChange={ (e) => { this.handleChange(e); } }/>
           <br />
-          <Button onClick={ (e) => this.handleSubmit(e) }>Submit</Button>
+          <Button className='btn btn-primary' id='submit-button-id' onClick={ (e) => this.handleSubmit(e) }>SUBMIT</Button>
         </Form>
       </div>
     );

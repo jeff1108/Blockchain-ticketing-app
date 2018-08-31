@@ -13,9 +13,9 @@ describe('Form', () => {
   });
 
   it('renders a submit button', () => {
-    expect(address_form.find('.btn').text()).toEqual('Submit');
+    expect(address_form.find('.btn').at(0).text()).toEqual('SUBMIT');
   });
-  describe('when submiting user details', () => {
+  describe('when submitting user details', () => {
     let firstname = 'testfirst';
     let lastname = 'testlast';
     let email = 'test@test.com';

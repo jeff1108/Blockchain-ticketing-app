@@ -9,11 +9,10 @@ const RECEIVER_ADDRESS = '525410238F3386EECD7E7D4682E124B193B41DDC3FF9D36AADE440
 
 class Concert extends Component {
 
-
   handleClick(e) {
     e.preventDefault();
 
-    fetch('http://localhost:9292/transaction', {
+    fetch('https://blockheads-backend.herokuapp.com/transaction', {
       method: 'POST',
       body: JSON.stringify(
         {
@@ -43,12 +42,12 @@ class Concert extends Component {
   render() {
     return (
       <div className='concert'>
-        <p>Concert: {this.props.concert.displayName}</p>
-        <p>Location: {this.props.concert.location.city}</p>
-        <p>Date: {this.getDate(this.props.concert.start.date)}</p>
-        <p>Price: {this.getPrice(this.props.concert.displayName)}</p>
-        <Button onClick={(e) => this.handleClick(e)}>
-          Buy!
+        <p id='concert-title'>{this.props.concert.displayName.substr(0, 30)}...</p>
+        <p id='concert-location'>Location: {this.props.concert.location.city}</p>
+        <p id='concert-date'>Date: {this.getDate(this.props.concert.start.date)}</p>
+        <p id='concert-price'>Price: {this.getPrice(this.props.concert.displayName)} BKH</p>
+        <Button id='concert-button' onClick={(e) => this.handleClick(e)}>
+          BUY!
         </Button>
       </div>
     );
