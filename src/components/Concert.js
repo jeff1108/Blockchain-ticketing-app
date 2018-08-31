@@ -18,7 +18,7 @@ class Concert extends Component {
         {
           'params':
             {
-              'sender': '74d87350d1774e28bb716cbd72f0aeb339705157ec105426f312a351dc23aed3',
+              'sender': SENDER_ADDRESS,
               'receiver': RECEIVER_ADDRESS,
               'name': this.props.concert.displayName,
               'value': this.getPrice(this.props.concert.displayName)
